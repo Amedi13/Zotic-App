@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // @ts-ignore: no declaration file for SearchBar.jsx
 import SearchBar from './components/SearchBar'
+// @ts-ignore: no declaration file for home.jsx
+import Login from './components/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,9 +20,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <div className="search-bar">
-        <SearchBar></SearchBar>
-      </div>
+      <Login></Login>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

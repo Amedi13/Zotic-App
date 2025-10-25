@@ -9,9 +9,6 @@ import Home from './home';
 const Login = () => {
     //Reuqired fields for the login form 
     const [formData, setFormData] = useState({ 
-        firstname: '',
-        lastname: '',
-        dob: '',
         email: '', 
         password: '',
     });
@@ -66,11 +63,10 @@ const Login = () => {
                 <form>
                     <div className="login-card">
                         <h2>Login</h2>
-                        <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange} placeholder="First Name"></input>
-                        <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange}placeholder="Last Name"></input>
                         <input type="text" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email"></input>
-                        <input type="text" name="dob" value={formData.dob} onChange={handleInputChange} placeholder="Date of Birth"></input>
-
+                        <input type="password" name="password" value={formData.password} onChange={handleInputChange} placeholder="passwrod"></input>
+                        {/*Create account button routing*/}
+                         <button onClick={() => navigate('/CreateAccount')}>Create Account</button> 
                         <button type="submit" onClick={handleOnSubmit}>submit</button>
                     </div>
                 </form>

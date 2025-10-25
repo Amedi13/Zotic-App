@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Messages } from 'primereact/messages';
 // @ts-ignore: no declaration file for Messages.jsx
 import { useNavigate } from 'react-router-dom';
+import Home from './home';
 
 
 
@@ -49,11 +50,11 @@ const Login = () => {
         if (validate){
             // login the user and go to home page + success message 
            // Messages.show({ severity: 'success', summary: 'Login Successful', detail: 'You have successfully logged in!' });
-            return navigate('/home');
+            navigate('/Home');
         } 
         else {
             setErrors({ submit: 'An error occurred during login. Please try again.' });
-            return navigate('/Login')
+            navigate('/Login')
         }
       }
 

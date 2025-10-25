@@ -5,8 +5,16 @@ const Home = () => {
 
     return (
     <div>
-        <h1>Welcome to the Home Page</h1>
+        <header>
+            <h2>Find Trusted Care for Your Exotic Pet</h2>
+            <h3>Connect with experienced, verified caretakers who specialize in exotic animals. From reptiles to birds, your unique companion deserves expert care.</h3>
+        </header>
+    
+        <main>
+            <SearchBar></SearchBar>
+        </main>
     </div>
+    
 ); 
 }; 
 export default Home; 

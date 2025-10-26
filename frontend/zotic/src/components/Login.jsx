@@ -39,8 +39,6 @@ const Login = () => {
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
       };
-
-      // try tp submit, if it fails defualt to an error message
       
         const handleOnSubmit = (e) => {
         e.preventDefault();

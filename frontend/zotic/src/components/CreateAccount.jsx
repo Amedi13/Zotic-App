@@ -45,11 +45,11 @@ const CreateAccount = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()){
-            Messages.show({ severity: 'success', summary: 'Account Created', detail: 'Your account has been successfully created!' });
-            navigate('/Login');
+//Messages.show({ severity: 'success', summary: 'Account Created', detail: 'Your account has been successfully created!' });
+            navigate('/Profile');
         }
         else {
-            Messages.show({ severity: 'error', summary: 'Account Creation Failed', detail: 'Please fill in all required fields correctly.' });
+           // Messages.show({ severity: 'error', summary: 'Account Creation Failed', detail: 'Please fill in all required fields correctly.' });
             navigate('/CreateAccount');
         }
     

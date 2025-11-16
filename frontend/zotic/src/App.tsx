@@ -6,7 +6,7 @@ import Login from './components/Login'
 // @ts-ignore: no declaration file for Home
 import Home from './components/Home';
 // @ts-ignore: no declaration file for CreateAccount
-import CreateAccount from './components/CreateAccount';
+import CreateAccount from './components/Register';
 
 
 function App() {

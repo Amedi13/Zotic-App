@@ -22,7 +22,7 @@ Zotic aims to make exotic pet care less stressful by ensuring the right knowledg
 * Express js
 
 *Project Strcuture* 
-
+```
 backend/
 │
 ├── api/
@@ -73,4 +73,4 @@ backend/
 │   └── README.md
 │
 └── test.js                            # Temporary testing file (can be moved into /test)
-
+```

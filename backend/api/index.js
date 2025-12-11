@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json()); 
 
 // Test Health
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
     res.json({ ok: true, message: "backend is running"});
 });
 

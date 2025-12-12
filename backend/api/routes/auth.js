@@ -2,15 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 //auth controller will go here
+const userController = require('../controllers/userController.js');
 
 // Register a new user
-router.post('/register', (authController.registerUser)); 
 
-// Login a user
-router.post('/login', (authController.loginUser));
+router.get('/users', (userController.getAllUsers));
 
-// Logout a user
-router.post('/logout', (authController.logoutUser));
-
-// Protected route - User Profile
-router.get('/profile', authMiddleware, authController.getUserProfile);
+module.exports = router;

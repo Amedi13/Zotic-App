@@ -27,50 +27,47 @@ backend/
 │
 ├── api/
 │   ├── controllers/
-│   │   ├── authController.js          # Handles login, signup, authentication logic
-│   │   ├── userController.js          # Handles CRUD operations for users
-│   │   ├── caretakerController.js     # Handles caretaker profile & specialties
-│   │   ├── bookingController.js       # Handles bookings and appointments
-│   │   ├── petController.js           # Handles pet data management
-│   │   └── reviewController.js        # Handles reviews and ratings
-│   │
+│   │   ├── authController.js         
+│   │   ├── userController.js         
+│   │   ├── caretakerController.js     
+│   │   ├── bookingController.js       
+│   │   ├── petController.js           
+│   │   └── reviewController.js        
 │   ├── models/
-│   │   ├── User.js                    # User schema
-│   │   ├── Caretaker.js               # Caretaker schema
-│   │   ├── Caretaker_Specialty.js     # Caretaker specialties schema
-│   │   ├── Pets.js                    # Pets schema
-│   │   ├── Bookings.js                # Booking schema
-│   │   └── Reviews.js                 # Review schema
+│   │   ├── User.js                    
+│   │   ├── Caretaker_Specialty.js    
+│   │   ├── Pets.js                   
+│   │   ├── Bookings.js                
+│   │   └── Reviews.js               
 │   │
 │   ├── routes/
-│   │   ├── authRoutes.js              # /api/auth endpoints
-│   │   ├── userRoutes.js              # /api/users endpoints
-│   │   ├── caretakerRoutes.js         # /api/caretakers endpoints
-│   │   ├── bookingRoutes.js           # /api/bookings endpoints
-│   │   ├── petRoutes.js               # /api/pets endpoints
-│   │   └── reviewRoutes.js            # /api/reviews endpoints
+│   │   ├── authRoutes.js           
+│   │   ├── userRoutes.js           
+│   │   ├── caretakerRoutes.js       
+│   │   ├── bookingRoutes.js          
+│   │   ├── petRoutes.js             
+│   │   └── reviewRoutes.js           
 │   │
 │   ├── middleware/
-│   │   ├── authMiddleware.js          # Protect routes, verify JWT
-│   │   └── errorHandler.js            # Centralized error handling
+│   │   ├── authMiddleware.js         
+│   │   └── errorHandler.js         
 │   │
 │   ├── config/
-│   │   ├── db.js                      # MongoDB connection setup
-│   │   └── cloudConfig.js             # (Optional) Cloud storage setup, e.g., AWS or Cloudinary
+│   │   ├── db.js                 
+│   │   └── cloudConfig.js           
 │   │
 │   ├── utils/
-│   │   ├── sendEmail.js               # Email sending utilities
-│   │   ├── generateToken.js           # JWT generation helper
-│   │   └── validators.js              # Input validation logic
+│   │   ├── sendEmail.js            
+│   │   ├── generateToken.js        
+│   │   └── validators.js              
 │   │
 │   ├── test/
-│   │   └── api.test.js                # Unit/integration tests
-│   │
-│   ├── .env                           # Environment variables (DB, PORT, JWT_SECRET)
-│   ├── index.js                       # Entry point – connects DB, initializes Express app
+│   │   └── api.test.js           
+│   │                   
+│   ├── index.js                     
 │   ├── package.json
 │   ├── package-lock.json
 │   └── README.md
-│
-└── test.js                            # Temporary testing file (can be moved into /test)
 ```
+*How to run the Application* 
+- Start the Backend Development server run the following command `npm run dev`

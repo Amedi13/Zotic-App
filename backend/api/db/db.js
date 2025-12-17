@@ -17,5 +17,29 @@ pool.connect()
     .catch(err => console.error('Connection error', err.stack));
 
 
+/**
+ * Check if user exists in the database
+ */
+ function authUser(username, email){
+    const sqlQuery = 'SELECT * from users where username = ? OR email = ?';
+   return new Promise((resolve, reject) => {
+        pool.query(sqlQuery, [username, email], (error, results) => {
+            if (error) {
+                return reject(error);
+            }
+           if (results.length > 0) {
+            //user exists
+            resolve(true);
+           }
+           else {
+            //user does not exist
+            resolve(false);
+           }
+        });
+    });
+}
+
+
 // export the app and pool for use in other files
 module.exports = pool; 
+module.exports = {authUser}

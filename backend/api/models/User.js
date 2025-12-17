@@ -2,19 +2,18 @@
  * TODO: 
  * IMPLEMENT THE USER MODEL
  */
-
-class user { 
-    constructor (id, firstname, lastname, email, password, dob, createdAt) {
-        this.id = id; 
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.email = email;
-        this.password = password;
-        this.dob = dob;
-        this.createdAt = createdAt;
+class User { 
+    constructor(id, firstname, lastname, username, email, password, dob, createdAt) {
+        this._id = id; 
+        this._firstname = firstname;
+        this._lastname = lastname;
+        this._username = username;
+        this._email = email;
+        this._password = password;
+        this._dob = dob;
+        this._createdAt = createdAt;
     }
 
-    
     // ID Methods
     set id(id) {
         this._id = id;
@@ -26,15 +25,66 @@ class user {
 
     // Firstname Methods
     set firstName(firstname) {
-        this.firstname = firstname;
+        this._firstname = firstname;
     }
 
     get firstName() {
-        return this.firstname 
+        return this._firstname;
     }
 
     // Lastname Methods
-    set lastName(lastname){
-        this.lastname = lastname
+    set lastName(lastname) {
+        this._lastname = lastname;
+    }
+
+    get lastName() {
+        return this._lastname;
+    }
+
+    // Username Methods
+    set userName(username) {
+        this._username = username;
+    }
+
+    get userName() {
+        return this._username;
+    }
+
+    // Email Methods
+    set email(email) {
+        this._email = email;
+    }
+
+    get email() {
+        return this._email;
+    }
+
+    // Password Methods
+    set password(password) {
+        this._password = password;
+    }
+
+    get password() {
+        return this._password;
+    }
+
+    // DOB Methods
+    set dob(dob) {
+        this._dob = dob;
+    }
+
+    get dob() {
+        return this._dob;
+    }
+
+    // CreatedAt Methods
+    set createdAt(createdAt) {
+        this._createdAt = createdAt;
+    }
+
+    get createdAt() {
+        return this._createdAt;
     }
 }
+
+export default User;

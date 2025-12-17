@@ -1,11 +1,14 @@
+import { register } from 'module';
 import { Messages } from 'primereact/messages';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { registerUser } from '../../../../backend/api/controllers/authController';
 
 const CreateAccount = () => {
     const [formData, setFromData] = useState ({
         firstname: '',
         lastname: '',
+        username: '',
         dob: '',
         email: '',
         password: '',
@@ -42,18 +45,21 @@ const CreateAccount = () => {
     }
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validate()){
-//Messages.show({ severity: 'success', summary: 'Account Created', detail: 'Your account has been successfully created!' });
-            navigate('/Profile');
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (validate()){
+        // register user api call
+        try {
+            const response = await registerUser(formData);
+            if (response.status === 200){
+                Messages.show({ severity: 'success', summary: 'Account Created Successfully', detail: 'You can now log in with your new account.' });
+                navigate('/login');
+            }
+        } catch (error) {
+            Messages.show({ severity: 'error', summary: 'Account Creation Failed', detail: 'An error occurred while creating your account.' });
         }
-        else {
-           // Messages.show({ severity: 'error', summary: 'Account Creation Failed', detail: 'Please fill in all required fields correctly.' });
-            navigate('/CreateAccount');
-        }
-    
     }
+}
 
     return (
         <div>
